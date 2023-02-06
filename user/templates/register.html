@@ -1,0 +1,77 @@
+<!-- 注册页面 -->
+{% extends "nav.html" %}
+
+{% block title %}
+    注册 - IMUSTCTF
+{% endblock %}
+
+{% block main %}
+    <div class="user-area pt-100 pb-70">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="user-img"><img src="{% static 'login/images/register_left.png' %}" alt="注册左侧图片">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="user-form">
+                        <div class="contact-form">
+                            <h2>欢迎加入IMUSTCTF</h2>
+                            <form>
+                                <div class="row">
+                                    <div class="col-lg-12 ">
+                                        <div class="form-group">
+                                            <input name="username" type="text" class="form-control" required
+                                                   data-error="请输入用户名"
+                                                   placeholder="用户名" id="username">
+                                            <div style="color: red;" id="username_tip"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 ">
+                                        <div class="form-group">
+                                            <input name="email" type="email" class="form-control" required
+                                                   data-error="请输入邮箱"
+                                                   placeholder="邮箱" id="email">
+                                            <div style="color: red;" id="email_tip"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                            <input class="form-control" type="password" name="password" required
+                                                   data-error="请输入密码"
+                                                   placeholder="密码" id="password">
+                                            <div style="color: red;" id="password_tip"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                            <input class="form-control" type="text" name="vercode" required
+                                                   data-error="请输入邮箱密钥"
+                                                   placeholder="邮箱密钥" id="vercode">
+                                            <div style="color: red;" id="key_tip"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 ">
+                                        <button type="button" class="default-btn btn-bg-two" id="register">注 册
+                                        </button>
+                                        <button type="button" class="default-btn btn-bg-two" id="email_key" value="">
+                                            获取邮箱密钥
+                                        </button>
+                                    </div>
+                                    <div class="col-12">
+                                        <p class="account-desc">已经有IMUSTCTF账户？ <a href="/user/login/">登录</a></p>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block jslist %}
+    <script src="{% static 'login/js/register.js' %}"></script>
+    <script src="{% static 'login/js/register_now.js' %}"></script>
+{% endblock %}

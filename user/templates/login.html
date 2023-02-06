@@ -1,0 +1,81 @@
+<!-- 登录页面 -->
+{% extends "nav.html" %}
+
+{% block title %}
+    登录 - IMUSTCTF
+{% endblock %}
+
+{% block main %}
+    <div class="user-area pt-100 pb-70">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="user-img"><img src="{% static 'login/images/login_left.png' %}" alt="登录左侧图片">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="user-form">
+                        <div class="contact-form">
+                            <h2>久别重逢</h2>
+                            <form action="">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" name="username_email" required
+                                                   data-error="请输入你的用户名或邮箱"
+                                                   placeholder="用户名或邮箱" id="username_email">
+                                            <div style="color: red;" id="username_email_tip"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="form-group">
+                                            <input class="form-control" type="password" name="password" required
+                                                   data-error="请输入你的密码"
+                                                   placeholder="密码" id="password">
+                                            <div style="color: red;" id="password_tip"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-12">
+                                        <div class="form-group">
+                                            <input class="form-control" type="text" name="vercode" required
+                                                   data-error="请输入密钥"
+                                                   placeholder="邮箱密钥" id="vercode">
+                                        </div>
+                                        <div style="color: red;" id="key_tip"></div>
+                                    </div>
+
+                                    <div class="col-lg-12 form-condition">
+                                        <div class="agree-label">
+                                            <input type="checkbox" id="chb1">
+                                            <label for="chb1">记住我 <a class="forget"
+                                                                        href="forget-password.html">忘记密码？</a></label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 ">
+                                        <button type="button" class="default-btn btn-bg-two" id="login">登 录</button>
+                                        <button type="button" class="default-btn btn-bg-two" id="email_key" value="">
+                                            获取邮箱密钥
+                                        </button>
+                                    </div>
+                                    <div class="col-12">
+                                        <p class="account-desc">没有注册过IMUSTCTF？ <a href="/user/register/">注册</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block jslist %}
+    <script src="{% static 'login/js/login.js' %}"></script>
+    <script src="{% static 'login/js/login_now.js' %}"></script>
+{% endblock %}
+
+
+
