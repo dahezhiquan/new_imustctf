@@ -1,0 +1,35 @@
+注意：以下为tips包调用的方法：
+
+
+<button onclick="defaults()">默认</button>
+<button onclick="success()">成功</button>
+<button onclick="fail()">失败</button>
+<button onclick="warnings()">警告</button>
+<button onclick="confirm()">提示弹窗</button>
+
+<script>
+    function defaults(){
+        $.message({type:'default',content:"我是默认提示"});
+    }
+    function success(){
+        $.message({type:'success',content:"我是成功提示"});
+    }
+    function fail(){
+        $.message({type:'error',content:"我是失败"});
+    }
+    function warnings(){
+        $.message({type:'warning',content:"警告提示"});
+    }
+    function confirm(){
+        $.confirm('确定删除该文件么?','提示信息',{
+                    confirmButtonText: '确定',
+                    cancelButtonText: '取消',
+                    type: 'warning',
+                    define:function(){
+
+                    },cancel:function(){
+                        $.message({content:'取消删除',time:2000})
+                    }
+        })
+    }
+</script>
