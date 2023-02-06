@@ -1,0 +1,30 @@
+<!-- 500页面 -->
+
+{% extends "nav.html" %}
+
+{% block title %}
+    500 - IMUSTCTF
+{% endblock %}
+
+{% block main %}
+    <div class="coming-soon-area">
+        <div class="d-table">
+            <div class="d-table-cell">
+                <div class="container">
+                    <div class="coming-soon-content">
+                        <h1>马上回来</h1>
+                        <p>服务器出了点故障，工作人员正在加紧抢修中...</p>
+                        <form class="newsletter-form" data-toggle="validator" action="/xxx/yyy/">
+                            <input type="text" class="input-newsletter" placeholder="输入你想说的话" name="text"
+                                   required autocomplete="off">
+                            <button type="submit" class="default-btn btn-bg-two">发泄一下</button>
+                            <div id="validator-newsletter" class="form-result"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br/><br/><br/>
+
+{% endblock %}
